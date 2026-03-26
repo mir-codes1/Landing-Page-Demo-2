@@ -1,0 +1,60 @@
+PRIMARY LOGO PROMPT (For Reference):
+"A high-quality 2D vector logo illustration of the word 'Souvenote' in the 
+Lobster font. The design features a clean, thin dark-bronze outline around 
+every character. The lettering has a soft, matte gold finish with an earthy, 
+non-reflective texture. Each individual letter has its own independent 
+vertical gradient, transitioning from a warm, muted bronze at the bottom 
+to a pale, creamy champagne gold at the top. The shading is subtle and 
+illustrated rather than metallic or glossy. Soft, diffused lighting with 
+no sharp glares or reflections. Set against a solid, very light off-white 
+parchment background. Professional, elegant, and minimal brand identity."
+-------------------------------------------------------------
+
+Subtext(buttons): 
+- Poppins font
+-------------------------------------------------------------
+LOGO HEX CODES:
+- Highlight (Top): #EEDDAA (Pale Champagne)
+- Mid-tone (Center): #D4BB7E (Muted Gold)
+- Shadow (Bottom): #9E7E4F (Earthy Bronze)
+- Outline: #4A3B22 (Dark Umber)
+------------------------------------------------------------
+
+PALETTE 1: THE "MODERN CLASSIC"
+(Best for a clean, high-end editorial look)
+
+- WEB BACKGROUND (Rose Gold): #F4E2D8
+- BODY TEXT (Charcoal): #2F2F2F
+- BUTTON GRADIENT (Matte Silver):
+    * Top:  #D1D1D1
+    * Mid:  #B8B8B8
+    * Base: #9A9A9A
+
+PALETTE 2: THE "WARM VINTAGE"
+(Best for an organic, artisanal feel)
+
+- WEB BACKGROUND (Rose Gold): #E8CFC1
+- BODY TEXT (Charcoal): #363230
+- BUTTON GRADIENT (Matte Silver/Pewter):
+    * Top:  #E3E3E3
+    * Mid:  #C7C2BC
+    * Base: #A6A19A
+
+PALETTE 3: THE "COOL LUXURY"
+(Best for a crisp, fresh, and sophisticated aesthetic)
+
+- WEB BACKGROUND (Rose Gold): #F9E9E8
+- BODY TEXT (Charcoal): #3D4042
+- BUTTON GRADIENT (Matte Silver/Slate):
+    * Top:  #EBF0F2
+    * Mid:  #CED6D9
+    * Base: #B0B8BC
+
+------------------------------------------------------------
+TECHNICAL RECOMMENDATION:
+To achieve the "Matte" look on your web buttons, use the 
+following CSS linear gradient logic:
+background: linear-gradient(to bottom, [Top Hex], [Mid Hex], [Base Hex]);
+------------------------------------------------------------
+
+
