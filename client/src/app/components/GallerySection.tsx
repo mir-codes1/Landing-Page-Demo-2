@@ -94,9 +94,9 @@ export default function GallerySection({
 
                     {/* Heading — staggered word entrance from behind the line */}
                     <h2
-                        className={`${lobsterClassName} text-[clamp(2.4rem,5vw,4.9rem)] text-[var(--accent-umber)] leading-[1.07] overflow-hidden`}
+                        className={`${cormorantClassName} italic text-[clamp(2.4rem,5vw,4.9rem)] text-[var(--accent-umber)] leading-[1.07] overflow-hidden`}
                     >
-                        <span className={`${cormorantClassName} italic`}>
+                        <span>
                             {HEADING_WORDS.map((word, i) => (
                                 <motion.span
                                     key={word}

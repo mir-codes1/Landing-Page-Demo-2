@@ -24,12 +24,12 @@ const CARDS = [
 ];
 
 const CARD_COLORS = [
-    { from: '#F4E2D8', to: '#D4BB7E' },
-    { from: '#E8CFC1', to: '#9E7E4F' },
-    { from: '#FDF8F4', to: '#EEDDAA' },
-    { from: '#F4E2D8', to: '#9E7E4F' },
-    { from: '#EEDDAA', to: '#D4BB7E' },
-    { from: '#E8CFC1', to: '#D4BB7E' },
+    { from: '#FBF0EB', to: '#D9A898' },
+    { from: '#F2D5CB', to: '#C4827A' },
+    { from: '#EED0C4', to: '#B87060' },
+    { from: '#F9E8E2', to: '#DBBAB0' },
+    { from: '#E8BBAC', to: '#A86158' },
+    { from: '#FBF0EB', to: '#C4927A' },
 ];
 
 const CARD_ICONS = [
@@ -54,18 +54,18 @@ const CARD_ICONS = [
 ];
 
 const CARD_STYLE = {
-    background: 'linear-gradient(180deg, var(--bg-cream) 0%, #fff 100%)',
-    boxShadow: '0 0.25rem 1.5rem rgba(74,59,34,0.07)',
+    background: 'linear-gradient(180deg, var(--bg-cream) 0%, #FBF0EB 100%)',
+    boxShadow: '0 0.25rem 1.5rem rgba(61,34,24,0.07)',
     borderTop: '0.125rem solid var(--accent-gold)',
-    borderLeft: '0.0625rem solid rgba(212,187,126,0.1)',
-    borderRight: '0.0625rem solid rgba(212,187,126,0.1)',
+    borderLeft: '0.0625rem solid rgba(196,130,122,0.1)',
+    borderRight: '0.0625rem solid rgba(196,130,122,0.1)',
     borderBottom: '0.1875rem solid var(--accent-bronze)',
 };
 
 const ARROW_STYLE = {
-    background: 'linear-gradient(135deg, rgba(253,248,244,0.9), rgba(244,226,216,0.9))',
+    background: 'linear-gradient(135deg, rgba(251,242,238,0.94), rgba(242,213,203,0.94))',
     backdropFilter: 'blur(0.5rem)',
-    boxShadow: '0 0.25rem 1.25rem rgba(74,59,34,0.1)',
+    boxShadow: '0 0.25rem 1.25rem rgba(61,34,24,0.1)',
 };
 
 export default function CardCarousel({

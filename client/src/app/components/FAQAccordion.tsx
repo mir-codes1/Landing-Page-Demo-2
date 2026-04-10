@@ -45,8 +45,9 @@ export default function FAQAccordion() {
                         animate={{ opacity: inView ? 1 : 0 }}
                         transition={{ duration: 0.9, delay: inView ? 0.25 + i * 0.12 : 0 }}
                         className={`faq-item rounded-2xl transition-all duration-400 ${
-                            isOpen ? 'faq-item-open' : 'bg-white/50 hover:bg-white/70'
+                            isOpen ? 'faq-item-open' : 'hover:bg-[rgba(251,242,238,0.65)]'
                         }`}
+                        style={!isOpen ? { background: 'rgba(251,242,238,0.4)' } : {}}
                     >
                         <button
                             onClick={() => setOpenIndex(isOpen ? null : i)}

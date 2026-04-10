@@ -49,10 +49,32 @@ export default function Navbar() {
     }
 
     return (
-        <header className="relative flex items-center justify-between px-4 sm:px-6 py-3 sm:py-4 border-b border-gray-100 text-sm bg-white text-[#111111] font-sans">
+        <header
+            className="relative flex items-center justify-between px-4 sm:px-6 py-3 sm:py-4 text-sm border-b"
+            style={{
+                background: 'linear-gradient(180deg, var(--bg-cream) 0%, rgba(251,242,238,0.97) 100%)',
+                backdropFilter: 'blur(12px)',
+                WebkitBackdropFilter: 'blur(12px)',
+                borderBottomColor: 'rgba(196,130,122,0.18)',
+                color: 'var(--text-primary)',
+            }}
+        >
             {/* Logo */}
-            <div className="font-bold text-lg tracking-tight flex-shrink-0">
-                <Link href="/">Souvenote</Link>
+            <div className="flex-shrink-0">
+                <Link
+                    href="/"
+                    style={{
+                        fontFamily: 'var(--font-cormorant, serif)',
+                        fontStyle: 'italic',
+                        fontSize: '1.45rem',
+                        fontWeight: 600,
+                        letterSpacing: '0.02em',
+                        color: 'var(--accent-umber)',
+                        textDecoration: 'none',
+                    }}
+                >
+                    Souvenote
+                </Link>
             </div>
 
             {/* Nav links — center, with hover subtext */}
@@ -66,13 +88,28 @@ export default function Navbar() {
                     >
                         <Link
                             href={link.href}
-                            className="whitespace-nowrap hover:text-gray-500 transition-colors font-medium"
+                            className="whitespace-nowrap transition-colors font-light tracking-wide"
+                            style={{
+                                color: 'var(--text-secondary)',
+                                fontSize: '13px',
+                                letterSpacing: '0.04em',
+                            }}
+                            onMouseEnter={(e) => (e.currentTarget.style.color = 'var(--accent-umber)')}
+                            onMouseLeave={(e) => (e.currentTarget.style.color = 'var(--text-secondary)')}
                         >
                             {link.label}
                         </Link>
                         {/* Hover subtext dropdown */}
                         {hoveredLink === link.label && (
-                            <div className="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-56 bg-white border border-gray-100 rounded-xl shadow-lg px-4 py-3 z-50 text-xs text-gray-500 leading-relaxed pointer-events-none">
+                            <div
+                                className="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-56 rounded-xl shadow-lg px-4 py-3 z-50 text-xs leading-relaxed pointer-events-none border"
+                                style={{
+                                    background: 'rgba(251,242,238,0.97)',
+                                    backdropFilter: 'blur(12px)',
+                                    borderColor: 'rgba(196,130,122,0.15)',
+                                    color: 'var(--text-muted)',
+                                }}
+                            >
                                 {link.subtext}
                             </div>
                         )}
@@ -83,16 +120,17 @@ export default function Navbar() {
             {/* Actions — right */}
             <div className="flex items-center gap-4 flex-shrink-0">
                 {/* Credit balances */}
-                <div className="hidden sm:flex items-center gap-3 text-xs text-gray-500">
+                <div
+                    className="hidden sm:flex items-center gap-3 text-xs"
+                    style={{ color: 'var(--text-muted)' }}
+                >
                     <span className="flex items-center gap-1">
-                        {/* Image credit icon */}
                         <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v12a1.5 1.5 0 001.5 1.5z" />
                         </svg>
                         <span>0</span>
                     </span>
                     <span className="flex items-center gap-1">
-                        {/* Music credit icon */}
                         <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M9 9l10.5-3m0 6.553v3.75a2.25 2.25 0 01-1.632 2.163l-1.32.377a1.803 1.803 0 11-.99-3.467l2.31-.66a2.25 2.25 0 001.632-2.163zm0 0V2.25L9 5.25v10.303m0 0v3.75a2.25 2.25 0 01-1.632 2.163l-1.32.377a1.803 1.803 0 01-.99-3.467l2.31-.66A2.25 2.25 0 009 15.553z" />
                         </svg>
@@ -105,7 +143,10 @@ export default function Navbar() {
                     <button
                         aria-label="Profile"
                         onClick={() => setProfileOpen((o) => !o)}
-                        className="hover:text-gray-500 transition-colors"
+                        className="transition-colors"
+                        style={{ color: 'var(--text-muted)' }}
+                        onMouseEnter={(e) => (e.currentTarget.style.color = 'var(--accent-umber)')}
+                        onMouseLeave={(e) => (e.currentTarget.style.color = 'var(--text-muted)')}
                     >
                         <svg width="20" height="20" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
@@ -114,17 +155,30 @@ export default function Navbar() {
                     {profileOpen && (
                         <>
                             <div className="fixed inset-0 z-40" onClick={() => setProfileOpen(false)} />
-                            <div className="absolute right-0 top-full mt-3 w-44 bg-white border border-gray-100 rounded-xl shadow-xl z-50 py-2">
+                            <div
+                                className="absolute right-0 top-full mt-3 w-44 rounded-xl shadow-xl z-50 py-2 border"
+                                style={{
+                                    background: 'rgba(251,242,238,0.97)',
+                                    backdropFilter: 'blur(12px)',
+                                    borderColor: 'rgba(196,130,122,0.15)',
+                                }}
+                            >
                                 <Link
                                     href="/account"
                                     onClick={() => setProfileOpen(false)}
-                                    className="block px-4 py-2.5 text-sm hover:bg-gray-50 transition-colors"
+                                    className="block px-4 py-2.5 text-sm transition-colors"
+                                    style={{ color: 'var(--text-secondary)' }}
+                                    onMouseEnter={(e) => ((e.currentTarget as HTMLElement).style.background = 'rgba(196,130,122,0.06)')}
+                                    onMouseLeave={(e) => ((e.currentTarget as HTMLElement).style.background = 'transparent')}
                                 >
                                     Account settings
                                 </Link>
                                 <button
                                     onClick={() => setProfileOpen(false)}
-                                    className="w-full text-left px-4 py-2.5 text-sm text-red-500 hover:bg-gray-50 transition-colors"
+                                    className="w-full text-left px-4 py-2.5 text-sm transition-colors"
+                                    style={{ color: 'var(--accent-bronze)' }}
+                                    onMouseEnter={(e) => ((e.currentTarget as HTMLElement).style.background = 'rgba(196,130,122,0.06)')}
+                                    onMouseLeave={(e) => ((e.currentTarget as HTMLElement).style.background = 'transparent')}
                                 >
                                     Log Out
                                 </button>
@@ -134,7 +188,13 @@ export default function Navbar() {
                 </div>
 
                 {/* Cart */}
-                <button aria-label="Cart" className="hover:text-gray-500 transition-colors">
+                <button
+                    aria-label="Cart"
+                    className="transition-colors"
+                    style={{ color: 'var(--text-muted)' }}
+                    onMouseEnter={(e) => (e.currentTarget.style.color = 'var(--accent-umber)')}
+                    onMouseLeave={(e) => (e.currentTarget.style.color = 'var(--text-muted)')}
+                >
                     <svg width="20" height="20" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
                         <path d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0L5.4 19h13.2M7 13l-1.6 6m10.6 0a2 2 0 100-4 2 2 0 000 4zM7 21a2 2 0 100-4 2 2 0 000 4z" />
                     </svg>
@@ -145,7 +205,10 @@ export default function Navbar() {
                     <button
                         aria-label="Menu"
                         onClick={() => setMenuOpen((o) => !o)}
-                        className="hover:text-gray-500 transition-colors"
+                        className="transition-colors"
+                        style={{ color: 'var(--text-muted)' }}
+                        onMouseEnter={(e) => (e.currentTarget.style.color = 'var(--accent-umber)')}
+                        onMouseLeave={(e) => (e.currentTarget.style.color = 'var(--text-muted)')}
                     >
                         <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
                             <path d="M4 6h16M4 12h16M4 18h16" />
@@ -154,19 +217,24 @@ export default function Navbar() {
 
                     {menuOpen && (
                         <>
-                            {/* Backdrop */}
+                            <div className="fixed inset-0 z-40" onClick={() => setMenuOpen(false)} />
                             <div
-                                className="fixed inset-0 z-40"
-                                onClick={() => setMenuOpen(false)}
-                            />
-                            {/* Dropdown */}
-                            <div className="absolute right-0 top-full mt-3 w-52 bg-white border border-gray-100 rounded-xl shadow-xl z-50 py-2">
+                                className="absolute right-0 top-full mt-3 w-52 rounded-xl shadow-xl z-50 py-2 border"
+                                style={{
+                                    background: 'rgba(251,242,238,0.97)',
+                                    backdropFilter: 'blur(12px)',
+                                    borderColor: 'rgba(196,130,122,0.15)',
+                                }}
+                            >
                                 {HAMBURGER_LINKS.map((item) => (
                                     <Link
                                         key={item.label}
                                         href={item.href}
                                         onClick={() => setMenuOpen(false)}
-                                        className="block px-4 py-2.5 text-sm hover:bg-gray-50 transition-colors"
+                                        className="block px-4 py-2.5 text-sm transition-colors"
+                                        style={{ color: 'var(--text-secondary)' }}
+                                        onMouseEnter={(e) => ((e.currentTarget as HTMLElement).style.background = 'rgba(196,130,122,0.06)')}
+                                        onMouseLeave={(e) => ((e.currentTarget as HTMLElement).style.background = 'transparent')}
                                     >
                                         {item.label}
                                     </Link>
